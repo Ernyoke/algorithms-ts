@@ -1,10 +1,9 @@
 const Heap = require('qheap');
 
-const prims = (graph, startPoint) => {
-  debugger;
-  const firstNode = graph.getNode(startPoint);
+const prims = (graph, startingLabel) => {
+  const firstNode = graph.getNode(startingLabel);
   if (!firstNode) {
-    throw new Error(`No such node with label ${startPoint}`);
+    throw new Error(`No such node with label ${startingLabel}`);
   }
 
   const queue = new Heap({ comparBefore: (edge1, edge2) => edge1.weigth < edge2.weigth });
