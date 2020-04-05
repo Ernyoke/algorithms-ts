@@ -1,5 +1,46 @@
-const prims = () => {
-  return "works";
+const Heap = require('qheap');
+
+const prims = (graph, startPoint) => {
+  debugger;
+  const firstNode = graph.getNode(startPoint);
+  if (!firstNode) {
+    throw new Error(`No such node with label ${startPoint}`);
+  }
+
+  const queue = new Heap({ comparBefore: (edge1, edge2) => edge1.weigth < edge2.weigth });
+  firstNode.edges.forEach((edge) => {
+    queue.enqueue(edge);
+  });
+
+  const visited = new Set();
+  visited.add(firstNode);
+
+  const tree = [];
+  while (queue.length > 0) {
+    const edge = queue.dequeue();
+    if (visited.has(edge.node1) && visited.has(edge.node2)) {
+      continue;
+    }
+    tree.push(edge);
+
+    const addEdgesToQueue = node => {
+      if (!visited.has(node)) {
+        visited.add(node);
+        const edges = node.edges;
+        edges.forEach(e => {
+          const otherNode = e.getOtherNode(node);
+          if (!visited.has(otherNode)) {
+            queue.enqueue(e);
+          }
+        });
+      }
+    };
+
+    addEdgesToQueue(edge.node1);
+    addEdgesToQueue(edge.node2);
+  }
+
+  return tree;
 }
 
 module.exports = prims;
