@@ -27,7 +27,6 @@ class Graph {
     }
 
     getNumberOfNodes() {
-        console.log("ASD:", this.nodes);
         return this.nodes.length;
     }
 

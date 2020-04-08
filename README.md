@@ -12,7 +12,7 @@ yarn run test
 yar run debug
 ```
 
-## Debug specifi test spec
+## Debug specific test spec
 
 ```
 yar run debug <spec>

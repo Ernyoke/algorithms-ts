@@ -1,45 +1,45 @@
 const Heap = require('qheap');
 
 const prims = (graph, startingLabel) => {
-  const firstNode = graph.getNode(startingLabel);
-  if (!firstNode) {
-    throw new Error(`No such node with label ${startingLabel}`);
-  }
-
-  const queue = new Heap({ comparBefore: (edge1, edge2) => edge1.weigth < edge2.weigth });
-  firstNode.edges.forEach((edge) => {
-    queue.enqueue(edge);
-  });
-
-  const visited = new Set();
-  visited.add(firstNode);
-
-  const tree = [];
-  while (queue.length > 0) {
-    const edge = queue.dequeue();
-    if (visited.has(edge.node1) && visited.has(edge.node2)) {
-      continue;
+    const firstNode = graph.getNode(startingLabel);
+    if (!firstNode) {
+        throw new Error(`No such node with label ${startingLabel}`);
     }
-    tree.push(edge);
 
-    const addEdgesToQueue = node => {
-      if (!visited.has(node)) {
-        visited.add(node);
-        const edges = node.edges;
-        edges.forEach(e => {
-          const otherNode = e.getOtherNode(node);
-          if (!visited.has(otherNode)) {
-            queue.enqueue(e);
-          }
-        });
-      }
-    };
+    const queue = new Heap({ comparBefore: (edge1, edge2) => edge1.weigth < edge2.weigth });
+    firstNode.edges.forEach((edge) => {
+        queue.enqueue(edge);
+    });
 
-    addEdgesToQueue(edge.node1);
-    addEdgesToQueue(edge.node2);
-  }
+    const visited = new Set();
+    visited.add(firstNode);
 
-  return tree;
+    const tree = [];
+    while (queue.length > 0) {
+        const edge = queue.dequeue();
+        if (visited.has(edge.node1) && visited.has(edge.node2)) {
+            continue;
+        }
+        tree.push(edge);
+
+        const addEdgesToQueue = node => {
+            if (!visited.has(node)) {
+                visited.add(node);
+                const edges = node.edges;
+                edges.forEach(e => {
+                    const otherNode = e.getOtherNode(node);
+                    if (!visited.has(otherNode)) {
+                        queue.enqueue(e);
+                    }
+                });
+            }
+        };
+
+        addEdgesToQueue(edge.node1);
+        addEdgesToQueue(edge.node2);
+    }
+
+    return tree;
 }
 
 module.exports = prims;
