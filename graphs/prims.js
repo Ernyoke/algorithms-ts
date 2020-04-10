@@ -1,7 +1,7 @@
 const Heap = require('qheap');
 
 const prims = (graph, startingLabel) => {
-    const firstNode = graph.getNode(startingLabel);
+    const firstNode = graph.node(startingLabel);
     if (!firstNode) {
         throw new Error(`No such node with label ${startingLabel}`);
     }
@@ -27,7 +27,7 @@ const prims = (graph, startingLabel) => {
                 visited.add(node);
                 const edges = node.edges;
                 edges.forEach(e => {
-                    const otherNode = e.getOtherNode(node);
+                    const otherNode = e.otherNode(node);
                     if (!visited.has(otherNode)) {
                         queue.enqueue(e);
                     }

@@ -35,7 +35,6 @@ describe('#graphs', function () {
         it ('should traverse the graph using depth-first search', function () {
             const actual = dfs(g, 1);
             expect(actual).to.exist;
-            console.log(actual);
             const expected = [1, 6, 3, 4, 2, 5];
             expected.forEach((expectedNode, index) => {
                 expect(actual[index].label).to.be.equal(expectedNode)

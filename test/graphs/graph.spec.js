@@ -21,9 +21,9 @@ describe("#graphs", function () {
             g.addEdge('label1', 'label2', 1);
             g.addEdge('label1', 'label3', 2);
             expect(g.getNumberOfEdges()).to.be.equal(2);
-            expect(g.getNode('label1').edges.length).to.be.equal(2);
-            expect(g.getNode('label2').edges.length).to.be.equal(1);
-            expect(g.getNode('label3').edges.length).to.be.equal(1);
+            expect(g.node('label1').edges.length).to.be.equal(2);
+            expect(g.node('label2').edges.length).to.be.equal(1);
+            expect(g.node('label3').edges.length).to.be.equal(1);
         });
 
     });

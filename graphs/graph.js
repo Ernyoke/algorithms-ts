@@ -1,18 +1,26 @@
 class Graph {
-    edges = [];
-    nodes = [];
+    _edges = [];
+    _nodes = [];
 
-    getNode(label) {
+    node(label) {
         return this.nodes.find(node => node.label == label);
+    }
+
+    get nodes() {
+        return this._nodes;
+    }
+
+    get edges() {
+        return this._edges;
     }
 
     addNode(label) {
         const node = new Node(label);
-        const index = this.nodes.findIndex(n => node.isEqual(n))
+        const index = this._nodes.findIndex(n => node.isEqual(n))
         if (index >= 0) {
             return this.nodes[index];
         }
-        this.nodes.push(node);
+        this._nodes.push(node);
         return node;
     }
 
@@ -20,14 +28,14 @@ class Graph {
         const node1 = this.addNode(label1);
         const node2 = this.addNode(label2);
         const edge = new Edge(node1, node2, weigth);
-        this.edges.push(edge);
+        this._edges.push(edge);
         node1.addEdge(edge);
         node2.addEdge(edge);
         return edge;
     }
 
     getNumberOfNodes() {
-        return this.nodes.length;
+        return this._nodes.length;
     }
 
     getNumberOfEdges() {
@@ -37,43 +45,63 @@ class Graph {
 
 class Node {
     constructor(label) {
-        this.label = label;
-        this.edges = [];
+        this._label = label;
+        this._edges = [];
+    }
+
+    get label() {
+        return this._label;
+    }
+
+    get edges() {
+        return this._edges;
     }
 
     addEdge(edge) {
-        this.edges.push(edge);
+        this._edges.push(edge);
     }
 
     isEqual(node) {
-        return this.label == node.label;
+        return this._label == node.label;
     }
 
     getNeighbours() {
-        return this.edges.map(edge => edge.getOtherNode(this));
+        return this._edges.map(edge => edge.otherNode(this));
     }
 }
 
 class Edge {
     constructor(node1, node2, wieght) {
-        this.node1 = node1;
-        this.node2 = node2;
-        this.weigth = wieght;
+        this._node1 = node1;
+        this._node2 = node2;
+        this._weigth = wieght;
+    }
+
+    get node1() {
+        return this._node1;
+    }
+
+    get node2() {
+        return this._node2;
+    }
+
+    get weigth() {
+        return this._weigth;
     }
 
     isEqual(node1, node2) {
-        return this.node1.isEqual(node1) && this.node2.isEqual(node2) || this.node1.isEqual(node2) && this.node2.isEqual(node1);
+        return this._node1.isEqual(node1) && this._node2.isEqual(node2) || this._node1.isEqual(node2) && this._node2.isEqual(node1);
     }
 
-    getOtherNode(node) {
-        if (this.node1.isEqual(node)) {
-            return this.node2;
+    otherNode(node) {
+        if (this._node1.isEqual(node)) {
+            return this._node2;
         }
-        return this.node1;
+        return this._node1;
     }
 
     hasNodeWithLabel(label) {
-        return this.node1.label === label || this.node2.label === label;
+        return this._node1.label === label || this._node2.label === label;
     }
 }
 

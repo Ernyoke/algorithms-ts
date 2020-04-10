@@ -1,7 +1,7 @@
 const Stack = require('../stack/stack');
 
 const dfs = (graph, startingPoint) => {
-    const startingNode = graph.getNode(startingPoint);
+    const startingNode = graph.node(startingPoint);
     const stack = new Stack()
     stack.push(...startingNode.getNeighbours());
     const visited = new Set();
