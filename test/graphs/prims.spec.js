@@ -1,5 +1,5 @@
-const prims = require('../../graphs/prims');
-const { Graph } = require('../../graphs/graph');
+const prims = require('../../src/graphs/prims');
+const { Graph } = require('../../src/graphs/graph');
 const chai = require('chai')
 const expect = chai.expect;
 

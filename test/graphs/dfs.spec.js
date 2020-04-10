@@ -1,6 +1,6 @@
 
-const dfs = require('./../../graphs/dfs');
-const { Graph } = require('../../graphs/graph');
+const dfs = require('../../src/graphs/dfs');
+const { Graph } = require('../../src/graphs/graph');
 const chai = require('chai');
 const expect = chai.expect;
 

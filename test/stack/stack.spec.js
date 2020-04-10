@@ -1,4 +1,4 @@
-const Stack = require('../../stack/stack');
+const Stack = require('../../src/stack/stack');
 const chai = require('chai');
 const assertArrays = require('chai-arrays');
 chai.use(assertArrays);
