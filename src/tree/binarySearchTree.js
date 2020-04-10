@@ -1,19 +1,21 @@
 class BinarySearchTree {
-    depth = 1;
+    _depth = 0;
 
     insert(value) {
         const setDepth = newDepth => {
-            if (newDepth < this.depth) {
-                this.depth = newDepth;
+            if (newDepth > this._depth) {
+                this._depth = newDepth;
             }
         };
 
         if (!this._root) {
             this._root = new TreeNode(value);
+            this._depth = 1;
         } else {
             let currentNode = this._root;
             let currentDepth = 1;
             while (true) {
+                currentDepth++;
                 if (value < currentNode.value) {
                     if (!currentNode.leftNode) {
                         currentNode.leftNode = value;
@@ -29,7 +31,6 @@ class BinarySearchTree {
                     }
                     currentNode = currentNode.rightNode;
                 }
-                currentDepth++;
             }
         }
     }
@@ -48,6 +49,10 @@ class BinarySearchTree {
         recTraverse(this._root);
 
         return nodes;
+    }
+
+    get depth() {
+        return this._depth;
     }
 }
 
