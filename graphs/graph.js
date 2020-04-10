@@ -48,6 +48,10 @@ class Node {
     isEqual(node) {
         return this.label == node.label;
     }
+
+    getNeighbours() {
+        return this.edges.map(edge => edge.getOtherNode(this));
+    }
 }
 
 class Edge {
