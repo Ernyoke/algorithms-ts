@@ -1,5 +1,5 @@
-const kruskal = require('./../../src/graphs/kruskal');
-const { Graph } = require('../../src/graphs/graph');
+const kruskal = require('../../src/graph/kruskal');
+const { Graph } = require('../../src/graph/graph');
 const chai = require('chai');
 const expect = chai.expect;
 

@@ -1,4 +1,4 @@
-const { Graph } = require('../../src/graphs/graph');
+const { Graph } = require('../../src/graph/graph');
 const chai = require('chai');
 const assertArrays = require('chai-arrays');
 chai.use(assertArrays);
