@@ -1,11 +1,11 @@
-const Heap = require('qheap');
+const PriorityQueue = require('../queue/priorityQueue');
 
 const kruskal = graph => {
     const nodes = graph.nodes;
     const nodeToForrest = new Map(nodes.map((node, index) => [node, index]))
     const forrestToNode = new Map(nodes.map((node, index) => [index, [node]]))
     
-    const queue = new Heap({ comparBefore: (edge1, edge2) => edge1.weigth < edge2.weigth });
+    const queue = new PriorityQueue((edge1, edge2) => edge1.weigth < edge2.weigth);
     graph.edges.forEach(edge => queue.enqueue(edge));
     
     const tree = [];

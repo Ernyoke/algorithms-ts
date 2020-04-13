@@ -83,6 +83,10 @@ class Heap {
         return head;
     }
 
+    get length() {
+        return this._heap.length;
+    }
+
     _switch(index1, index2) {
         const aux = this._heap[index1];
         this._heap[index1] = this._heap[index2];

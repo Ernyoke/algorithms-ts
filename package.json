@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "chai-arrays": "^2.0.0",
-    "qheap": "^1.4.0",
     "validator": "^13.0.0"
   }
 }

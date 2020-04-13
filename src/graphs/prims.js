@@ -1,4 +1,4 @@
-const Heap = require('qheap');
+const PriorityQueue = require('../queue/priorityQueue');
 
 const prims = (graph, startingLabel) => {
     const firstNode = graph.node(startingLabel);
@@ -6,7 +6,7 @@ const prims = (graph, startingLabel) => {
         throw new Error(`No such node with label ${startingLabel}`);
     }
 
-    const queue = new Heap({ comparBefore: (edge1, edge2) => edge1.weigth < edge2.weigth });
+    const queue = new PriorityQueue((edge1, edge2) => edge1.weigth < edge2.weigth);
     firstNode.edges.forEach((edge) => {
         queue.enqueue(edge);
     });
