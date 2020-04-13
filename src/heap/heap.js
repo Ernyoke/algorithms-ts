@@ -37,22 +37,24 @@ class Heap {
     }
 
     pop() {
-        if (this._heap.length < 1) {
+        const heap = this._heap;
+
+        if (heap.length < 1) {
             return;
         }
 
-        if (this._heap.length == 1) {
-            return this._heap.splice(this._heap.length - 1, 1)[0];
+        if (heap.length == 1) {
+            return heap.splice(this._heap.length - 1, 1)[0];
         }
 
         const head = this._heap[0];
-        this._heap[0] = this._heap.splice(this._heap.length - 1, 1)[0];
-        let length = this._heap.length;
+        heap[0] = heap.splice(this._heap.length - 1, 1)[0];
+        const length = heap.length;
 
-        const heapify = (heap, index) => {
-            const switchIndexOrder = ((heap, index) => {
+        const heapify = (index) => {
+            const switchIndexOrder = (index => {
                 const leftChildIndex = 2 * index + 1;
-                const rightChildIndex = 2 * index + 2;
+                const rightChildIndex = leftChildIndex + 1;
                 if (leftChildIndex < length && rightChildIndex < length) {
                     if (this._comparator(heap[leftChildIndex], heap[rightChildIndex])) {
                         return [leftChildIndex, rightChildIndex];
@@ -66,17 +68,17 @@ class Heap {
                     return [rightChildIndex];
                 }
                 return [];
-            })(heap, index);
+            })(index);
 
             const switchIndex = switchIndexOrder.find(switchIndex => this._comparator(heap[switchIndex], heap[index]));
 
             if (switchIndex) {
                 this._switch(index, switchIndex);
-                heapify(this._heap, switchIndex);
+                heapify(switchIndex);
             }
         };
 
-        heapify(this._heap, 0);
+        heapify(0);
 
         return head;
     }
