@@ -44,11 +44,11 @@ class Heap {
         }
 
         if (heap.length == 1) {
-            return heap.splice(this._heap.length - 1, 1)[0];
+            return heap.pop();
         }
 
         const head = this._heap[0];
-        heap[0] = heap.splice(this._heap.length - 1, 1)[0];
+        heap[0] = heap.pop();
         const length = heap.length;
 
         const heapify = (index) => {

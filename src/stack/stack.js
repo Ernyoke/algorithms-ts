@@ -11,7 +11,7 @@ class Stack {
 
     pop() {
         if (this._stack.length > 0) {
-            return this._stack.splice(this._stack.length - 1, 1)[0];
+            return this._stack.pop();
         }
     }
 };
