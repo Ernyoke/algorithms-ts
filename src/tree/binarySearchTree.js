@@ -35,7 +35,23 @@ class BinarySearchTree {
         }
     }
 
-    traverse() {
+    traverseInorder() {
+        let nodes = [];
+
+        const recTraverse = node => {
+            if (node) {
+                recTraverse(node.leftNode);
+                nodes.push(node.value);
+                recTraverse(node.rightNode);
+            }
+        }
+
+        recTraverse(this._root);
+
+        return nodes;
+    }
+
+    traversePreorder() {
         let nodes = [];
 
         const recTraverse = node => {
@@ -51,6 +67,37 @@ class BinarySearchTree {
         return nodes;
     }
 
+    traversePreorder() {
+        let nodes = [];
+
+        const recTraverse = node => {
+            if (node) {
+                nodes.push(node.value);
+                recTraverse(node.leftNode);
+                recTraverse(node.rightNode);
+            }
+        }
+
+        recTraverse(this._root);
+
+        return nodes;
+    }
+
+    traversePostorder() {
+        let nodes = [];
+
+        const recTraverse = node => {
+            if (node) {
+                recTraverse(node.leftNode);
+                recTraverse(node.rightNode);
+                nodes.push(node.value);
+            }
+        }
+
+        recTraverse(this._root);
+
+        return nodes;
+    }
     get depth() {
         return this._depth;
     }
