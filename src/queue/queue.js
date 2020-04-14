@@ -8,12 +8,12 @@ class Queue {
     }
 
     dequeue() {
-        return this._queue.pop();
+        return this._queue.shift();
     }
 
     peek() {
         if (this._queue.length > 0) {
-            return this._queue[this._queue.length - 1];
+            return this._queue[0];
         }
     }
 
