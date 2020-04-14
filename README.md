@@ -4,7 +4,9 @@
 
 * Graph
 * Heap
-* Priority Queue
+* Queue
+    * Simple Queue
+    * Priority Queue
 * Tree
     * Binary Search Tree
 * Stack
