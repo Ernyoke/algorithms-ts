@@ -24,6 +24,7 @@
 
 * Mathematical
     * Is Power Of 2
+    * Square Root - Newton-Raphson method
     
 
 ## Run tests
