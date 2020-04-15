@@ -35,13 +35,13 @@ yarn run test
 ## Debug all tests
 
 ```
-yar run debug
+yarn run debug
 ```
 
 ## Debug specific test spec
 
 ```
-yar run debug <spec>
+yarn run debug <spec>
 ```
 
 ### Example
