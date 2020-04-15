@@ -19,6 +19,9 @@
         * Prim's
         * Kruskal
 
+* Search
+    * Binary Search
+
 * Mathematical
     * Is Power Of 2
     
