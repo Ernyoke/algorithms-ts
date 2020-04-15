@@ -8,17 +8,13 @@
  * 
  */
 
-const squareRoot = (number, eps) => {
+const squareRoot = (number, eps = 0.000001) => {
     if (number < 0) {
         throw new Error('Can not get the square root of a negative!');
     }
 
     if (number === 0) {
         return 0;
-    }
-
-    if (!eps) {
-        eps = 0.000001;
     }
 
     let x = 1;
