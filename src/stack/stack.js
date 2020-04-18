@@ -14,6 +14,10 @@ class Stack {
             return this._stack.pop();
         }
     }
+
+    isEmpty() {
+        return this.length <= 0;
+    }
 };
 
 module.exports = Stack;

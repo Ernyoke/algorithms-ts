@@ -20,6 +20,10 @@ class Queue {
     get length() {
         return this._queue.length;
     }
+
+    isEmpty() {
+        return this.length <= 0;
+    }
 }
 
 module.exports = Queue;
