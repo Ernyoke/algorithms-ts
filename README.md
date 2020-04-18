@@ -14,7 +14,8 @@
 ## Algorithms:
 
 * Graphs:
-    * Depth First Search (DFS)
+    * Depth-First Search (DFS)
+    * Breath-First Search (BFS)
     * Minimum Trees:
         * Prim's
         * Kruskal
@@ -29,6 +30,10 @@
     * Is Power Of 2
     * Square Root - Newton-Raphson method
     * Is Number Prime
+
+* Miscellaneous
+    * Is Paranthesis Order Balanced
+
     
 
 ## Run tests
