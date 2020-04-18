@@ -4,7 +4,7 @@
  * @param {function(value1, value2) => boolean} comparator 
  */
 const quickSort = (values, comparator) => {
-    const comp =  comparator ? comparator : (a, b) => a < b;
+    const comp = comparator ? comparator : (a, b) => a < b;
 
     const swap = (index1, index2) => {
         const aux = values[index1];
