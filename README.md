@@ -1,6 +1,6 @@
 # Algorithms
 
-## Data structuresL
+## Data structures
 
 * Graph
 * Heap
@@ -21,6 +21,9 @@
 
 * Search
     * Binary Search
+
+* Sort
+    * Quick-sort
 
 * Mathematical
     * Is Power Of 2
