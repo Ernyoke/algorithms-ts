@@ -3,8 +3,8 @@ class Queue {
         this._queue = [];
     }
 
-    enqueue(value) {
-        this._queue.push(value);
+    enqueue(...value) {
+        this._queue.push(...value);
     }
 
     dequeue() {
