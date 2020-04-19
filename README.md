@@ -14,11 +14,13 @@
 ## Algorithms:
 
 * Graphs:
-    * Depth-First Search (DFS)
-    * Breath-First Search (BFS)
-    * Minimum Trees:
-        * Prim's
-        * Kruskal
+    * Undirected Graphs:
+        * Depth-First Search (DFS)
+        * Breath-First Search (BFS)
+        * Minimum Trees:
+            * Prim's
+            * Kruskal
+    * Directed Graphs
 
 * Search
     * Binary Search
