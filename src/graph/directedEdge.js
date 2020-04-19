@@ -1,5 +1,9 @@
 const Edge = require('./edge');
 
+/**
+ * Implementation of a directional edge for a directed graph.
+ * The edge contains an out-node and an in-node. The direction of the edge is from the out-node to the in-node.
+ */
 class DirectedEdge extends Edge {
     constructor(outNode, inNode, weight) {
         super(weight);

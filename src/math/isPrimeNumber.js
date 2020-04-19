@@ -4,6 +4,10 @@ function* range(start = 0, end = 100) {
     }
 }
 
+/**
+ * Decide if an integer number is prim (is divisible by 1 and itselft only). 
+ * @param {number} number - a numeric integer value 
+ */
 const isPrime = number => {
     if (number < 2) {
         return false;

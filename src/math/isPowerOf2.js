@@ -14,8 +14,9 @@
  * 7: 0111
  *
  * 8 & (8 - 1) = 1000 & 0111 = 0 
+ * 
+ * @param {number} value - a numeric integer value
  */
-
 const isPowerOf2 = value => (value & (value - 1)) === 0;
 
 module.exports = isPowerOf2;
