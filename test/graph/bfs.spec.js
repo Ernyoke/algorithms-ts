@@ -1,13 +1,13 @@
 const bfs = require('../../src/graph/bfs');
-const { Graph } = require('../../src/graph/graph');
+const UndirectedGraph = require('../../src/graph/undirectedGraph');
 const chai = require('chai');
 const expect = chai.expect;
 
-describe('#graphs', function () {
+describe('#graph', function () {
     describe('#bfs', function () {
         let g;
         beforeEach(() => {
-            g = new Graph();
+            g = new UndirectedGraph();
             g.addEdge(1, 2, 3);
             g.addEdge(1, 6, 1);
             g.addEdge(2, 3, 3);

@@ -1,13 +1,13 @@
 const prims = require('../../src/graph/prims');
-const { Graph } = require('../../src/graph/graph');
+const UndirectegGraph = require('../../src/graph/undirectedGraph');
 const chai = require('chai')
 const expect = chai.expect;
 
-describe('#graphs', function () {
+describe('#graph', function () {
     describe('#prims', function () {
         let g;
         beforeEach(() => {
-            g = new Graph();
+            g = new UndirectegGraph();
             g.addEdge(1, 2, 5);
             g.addEdge(1, 3, 3);
             g.addEdge(1, 4, 6);
