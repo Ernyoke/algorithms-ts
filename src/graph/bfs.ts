@@ -8,7 +8,7 @@ import Edge from "./edge";
  * @param {Graph} graph - graph which will be traversed 
  * @param {Object} startingLabel - label for the starting point 
  */
-export default function bfs<T, U extends GraphNode<T, U>, V extends Edge<T, U>>(graph: Graph<T, U, V>, startingLabel: T): U[] {
+export default function bfs<T, U extends GraphNode<T, U, V>, V extends Edge<T, U, V>>(graph: Graph<T, U, V>, startingLabel: T): U[] {
     const startingNode: U = graph.node(startingLabel);
     const queue = new Queue<U>();
     queue.enqueue(...startingNode.getNeighbours());
