@@ -1,28 +1,30 @@
 {
-  "name": "algorithms",
-  "version": "1.0.0",
-  "description": "Algorithms.",
-  "main": "index.js",
-  "author": "Ervin Szilagyi",
-  "license": "MIT",
-  "scripts": {
-    "run": "node index.js",
-    "test": "ts-mocha -p test/tsconfig.test.json test/**/*.spec.ts",
-    "debug": "ts-mocha --inspect-brk test/tsconfig.test.json test/**/*.spec.ts",
-    "test-spec": "ts-mocha"
-  },
-  "devDependencies": {
-    "@types/chai": "^4.2.11",
-    "@types/chai-arrays": "^1.0.3",
-    "@types/expect": "^24.3.0",
-    "@types/mocha": "^7.0.2",
-    "chai": "^4.2.0",
-    "chai-arrays": "^2.0.0",
-    "mocha": "^7.1.1",
-    "ts-mocha": "^7.0.0",
-    "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "validator": "^13.0.0"
-  }
+    "name": "algorithms",
+    "version": "1.0.0",
+    "description": "Algorithms.",
+    "main": "index.ts",
+    "author": "Ervin Szilagyi",
+    "license": "MIT",
+    "scripts": {
+        "clean": "rm -rf dist/",
+        "build": "yarn clean && tsc",
+        "start": "yarn build && node dist/index.js",
+        "test": "ts-mocha -p test/tsconfig.test.json test/**/*.spec.ts",
+        "debug": "ts-mocha --inspect-brk test/tsconfig.test.json test/**/*.spec.ts",
+        "test-spec": "ts-mocha"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.11",
+        "@types/chai-arrays": "^1.0.3",
+        "@types/expect": "^24.3.0",
+        "@types/mocha": "^7.0.2",
+        "chai": "^4.2.0",
+        "chai-arrays": "^2.0.0",
+        "mocha": "^7.1.1",
+        "ts-mocha": "^7.0.0",
+        "typescript": "^3.8.3"
+    },
+    "dependencies": {
+        "validator": "^13.0.0"
+    }
 }
