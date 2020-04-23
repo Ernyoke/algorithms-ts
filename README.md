@@ -3,6 +3,8 @@
 ## Data structures
 
 * Graph
+    * Undirected Graph
+    * Directed Graph
 * Heap
 * Queue
     * Simple Queue
