@@ -4,8 +4,8 @@ import UndirectedGraph from "../../src/graph/undirectedGraph";
 import kruskal from "../../src/graph/kruskal";
 import UndirectedEdge from "../../src/graph/undirectedEdge";
 
-describe('#graph', function () {
-    describe('#kruskal', function () {
+describe("#graph", function () {
+    describe("#kruskal", function () {
         let g: UndirectedGraph<number>;
         beforeEach(() => {
             g = new UndirectedGraph<number>();
@@ -18,7 +18,7 @@ describe('#graph', function () {
             g.addEdge(3, 6, 5);
         });
 
-        it('should create a tree', function () {
+        it("should create a tree", function () {
             const actual: UndirectedEdge<number>[] = kruskal(g);
             expect(actual).to.exist;
             const expected = [[1, 6], [2, 4], [2, 3], [1, 2], [2, 5]];

@@ -3,7 +3,7 @@
  * representation.
  * Example: 710 -> 1011000110 (the number of 1's is 5) 
  * 
- * @param {array} values - array of positive integers 
+ * @param {number[]} values - array of positive integers 
  */
 export default function sortByBinaryOnes(values: number[]) {
     values.sort((a, b) => {

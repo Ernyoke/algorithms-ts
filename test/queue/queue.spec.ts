@@ -2,8 +2,8 @@ import { expect } from "chai"
 
 import Queue from "../../src/queue/queue";
 
-describe('#queue', function () {
-    describe('#queue', function () {
+describe("#queue", function () {
+    describe("#queue", function () {
         let q: Queue<number>;
         beforeEach(function () {
             q = new Queue();
@@ -15,11 +15,11 @@ describe('#queue', function () {
             q.enqueue(6);
         });
 
-        it ('should peek the first element', function() {
+        it ("should peek the first element", function() {
             expect(q.peek()).to.be.equal(3);
         });
 
-        it ('should return and remove the first element', function() {
+        it ("should return and remove the first element", function() {
             const elements: number[] = [];
             while(q.length > 0) {
                 elements.push(q.dequeue());

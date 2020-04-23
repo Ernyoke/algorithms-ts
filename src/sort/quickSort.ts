@@ -1,7 +1,7 @@
 /**
  * In plage Quick-sort algorithm 
- * @param {array} values 
- * @param {function(value1, value2) => boolean} comparator 
+ * @param {T[]} values 
+ * @param {(a: T, b: T) => boolean} comparator 
  */
 export default function quickSort<T>(values: T[], comparator: (a: T, b: T) => boolean = (a: T, b: T) =>  a < b): void {
 

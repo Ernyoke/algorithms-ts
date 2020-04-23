@@ -3,8 +3,8 @@ import { expect } from "chai";
 import UndirectedGraph from "../../src/graph/undirectedGraph";
 import prims from "../../src/graph/prims";
 
-describe('#graph', function () {
-    describe('#prims', function () {
+describe("#graph", function () {
+    describe("#prims", function () {
         let g: UndirectedGraph<number>;
         beforeEach(() => {
             g = new UndirectedGraph<number>();
@@ -19,11 +19,11 @@ describe('#graph', function () {
             g.addEdge(5, 8, 7);
         });
 
-        it('it should throw an error if the node does not exists', function () {
-            expect(() => { prims(g, 12) }).to.throw(Error, 'No such node with label 12');
+        it("it should throw an error if the node does not exists", function () {
+            expect(() => { prims(g, 12) }).to.throw(Error, "No such node with label 12");
         });
 
-        it('it should create a tree', function () {
+        it("it should create a tree", function () {
             const result = prims(g, 1)
             const expected = [[1, 3], [3, 6], [2, 6], [1, 4], [4, 5], [3, 7], [5, 8]];
             expected.forEach((nodes, index) => {

@@ -3,8 +3,8 @@ import { expect } from "chai";
 import UndirectedGraph from "../../src/graph/undirectedGraph";
 import dfs from "../../src/graph/dfs";
 
-describe('#graph', function () {
-    describe('#dfs', function () {
+describe("#graph", function () {
+    describe("#dfs", function () {
         let g: UndirectedGraph<number>;
         beforeEach(() => {
             g = new UndirectedGraph<number>();
@@ -31,7 +31,7 @@ describe('#graph', function () {
             */
         });
 
-        it ('should traverse the graph using depth-first search', function () {
+        it ("should traverse the graph using depth-first search", function () {
             const actual = dfs(g, 1);
             expect(actual).to.exist;
             const expected = [1, 6, 3, 4, 2, 5];

@@ -3,8 +3,8 @@ import { expect } from "chai";
 import UndirectedGraph from "../../src/graph/undirectedGraph";
 import bfs from "../../src/graph/bfs";
 
-describe('#graph', function () {
-    describe('#bfs', function () {
+describe("#graph", function () {
+    describe("#bfs", function () {
         let g: UndirectedGraph<number>;
         beforeEach(() => {
             g = new UndirectedGraph<number>();
@@ -31,7 +31,7 @@ describe('#graph', function () {
             */
         });
 
-        it('should traverse the graph using breath-first search', function () {
+        it("should traverse the graph using breath-first search", function () {
             const actual = bfs(g, 1);
             expect(actual).to.exist;
             const expected = [1, 2, 6, 3, 4, 5];
