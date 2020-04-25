@@ -4,7 +4,7 @@ import DirectedEdge from "./directedEdge";
 /**
  * Implementation for a node (vertex) which should be part of a directed graph.
  * The difference between an undirected node and a directed node is that in case of a directed node,
- * the set of outgoind edges are separated from the set on incoming edges.
+ * the set of outgoing edges are separated from the set on incoming edges.
  */
 export default class DirectedNode<T> extends GraphNode<T, DirectedNode<T>, DirectedEdge<T>> {
     private _inEdges: DirectedEdge<T>[] = [];

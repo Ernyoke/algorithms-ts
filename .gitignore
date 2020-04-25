@@ -3,3 +3,7 @@ node_modules
 dist
 
 tags
+
+.nyc_output
+
+.idea
