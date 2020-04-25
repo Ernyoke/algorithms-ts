@@ -4,7 +4,7 @@ import BinarySearchTree from "../../src/tree/binarySearchTree";
 
 describe("#tree", function () {
     describe("#binarySearchTree", function () {
-        let bst;
+        let bst: BinarySearchTree<number>;
         beforeEach(() => {
             bst = new BinarySearchTree();
 

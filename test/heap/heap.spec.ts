@@ -1,4 +1,4 @@
-import { expect } from "chai"
+import {expect} from "chai"
 
 import Heap from "../../src/heap/heap";
 
@@ -17,7 +17,7 @@ describe("#heap", function () {
         });
 
         it("should create a heap from the elements using custom comparator", function () {
-            const heap = new Heap((a, b) => b < a);
+            const heap = new Heap<number>((a, b) => b < a);
             heap.push(1);
             heap.push(8);
             heap.push(7);
@@ -38,12 +38,12 @@ describe("#heap", function () {
             heap.push(5);
 
             const actual = [];
-            while(heap.peek() !== undefined) {
+            while (heap.peek() !== undefined) {
                 actual.push(heap.pop());
             }
 
             expect(actual).to.have.ordered.members([1, 3, 5, 7, 8, 9]);
         });
-        
+
     });
 });

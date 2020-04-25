@@ -9,9 +9,8 @@
         "clean": "rm -rf dist/",
         "build": "yarn clean && tsc",
         "start": "yarn build && node dist/index.js",
-        "test": "ts-mocha -p test/tsconfig.test.json test/**/*.spec.ts",
-        "debug": "ts-mocha --inspect-brk test/tsconfig.test.json test/**/*.spec.ts",
-        "test-spec": "ts-mocha"
+        "test": "./node_modules/mocha/bin/_mocha --require ts-node/register --ui bdd test/**/*.spec.ts",
+        "debug": "./node_modules/mocha/bin/_mocha --inspect-brk --require ts-node/register --ui bdd test/**/*.spec.ts"
     },
     "devDependencies": {
         "@types/chai": "^4.2.11",
@@ -21,7 +20,8 @@
         "chai": "^4.2.0",
         "chai-arrays": "^2.0.0",
         "mocha": "^7.1.1",
-        "ts-mocha": "^7.0.0",
+        "nyc": "^15.0.1",
+        "ts-node": "^8.9.0",
         "typescript": "^3.8.3"
     },
     "dependencies": {

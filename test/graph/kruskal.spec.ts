@@ -1,4 +1,4 @@
-import { expect } from "chai";
+import {expect} from "chai";
 
 import UndirectedGraph from "../../src/graph/undirectedGraph";
 import kruskal from "../../src/graph/kruskal";
@@ -23,9 +23,8 @@ describe("#graph", function () {
             expect(actual).to.exist;
             const expected = [[1, 6], [2, 4], [2, 3], [1, 2], [2, 5]];
             expected.forEach((nodes, index) => {
-                console.log(actual[index]);
-                // expect(actual[index].hasNodeWithLabel(nodes[0])).to.be.true;
-                // expect(actual[index].hasNodeWithLabel(nodes[1])).to.be.true;
+                expect(actual[index].hasNodeWithLabel(nodes[0])).to.be.true;
+                expect(actual[index].hasNodeWithLabel(nodes[1])).to.be.true;
             })
         });
     });

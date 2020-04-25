@@ -25,7 +25,7 @@ export default function kruskal<T, U extends GraphNode<T, U, V>, V extends Edge<
         const edge = queue.dequeue();
         const forest1 = nodeToForrest.get(edge.node1);
         const forest2 = nodeToForrest.get(edge.node2);
-        if (forest1 && forest2 && forest1 != forest2) {
+        if (forest1 !== undefined && forest2 !== undefined && forest1 != forest2) {
             tree.push(edge);
             nodeToForrest.set(edge.node2, forest1);
             getOrThrow(forrestToNode, forest2).forEach(node => nodeToForrest.set(node, forest1));
