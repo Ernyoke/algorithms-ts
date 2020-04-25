@@ -28,7 +28,11 @@
     * Binary Search
 
 * Sort
-    * Quick-sort
+    * Quick-sort (recursive and non-recursive)
+    
+* Arrays:
+    * Reverse
+    * Rotate
 
 * Mathematical
     * Is Power Of 2
@@ -39,7 +43,6 @@
     * Is Paranthesis Order Balanced
     * Sort By Binary Ones
 
-    
 
 ## Run tests
 
@@ -62,5 +65,5 @@ yarn run debug <spec>
 ### Example
 
 ```
-yarn run debug graph.spec.js
+yarn run debug graph.spec.ts
 ```
