@@ -1,34 +1,22 @@
 /**
- * Search an element inside of a sorted array.
- * @param values: a sorted array
- * @param elementToFind: an element which is expected to be found in the array
- * @param comparator: a function which expects two elements as arguments and returns -1, 0, 1. 
- *      -1: if the first argument is lesser than the second
- *       0: if the arguments are equal
- *       1: if the second argument is greater then the first
- * @returns the position of the elementTo Find if it is found, otherwise undefined
+ * Returns the position of an element in the array. In case if the array, does not contain the element, the returned
+ * index value is the position where the element would be placed.
+ * @param {T[]} values
+ * @param {T} elementToFind
+ * @param {(a: T, b: T) => boolean} comparator: comparator functions which should compare two elements of type T and
+ * should return true if a < b;
  */
 export default function binarySearch<T>(values: T[], elementToFind: T,
-    comparator: (a: T, b: T) => number = (a: T, b: T) => a === b ? 0 : a < b ? -1 : 1): number | undefined {
-
-    const binarySearchRecoursive = (startIndex: number, endIndex: number): number | undefined => {
-        if (startIndex < endIndex) {
-            const index = Math.floor((startIndex + endIndex) / 2);
-            switch (comparator(values[index], elementToFind)) {
-                case 0:
-                    return index;
-                case 1:
-                    return binarySearchRecoursive(startIndex, index - 1);
-                case -1:
-                    return binarySearchRecoursive(index + 1, endIndex);
-            }
+                                        comparator: (a: T, b: T) => boolean = (a: T, b:T) => a < b) {
+    let first = 0;
+    let last = values.length - 1;
+    while (first < last) {
+        const mid = first + Math.floor((last - first) / 2);
+        if (comparator(values[mid], elementToFind)) {
+            first = mid + 1;
         } else {
-            if (startIndex == endIndex && comparator(values[startIndex], elementToFind) === 0) {
-                return startIndex;
-            }
+            last = mid;
         }
     }
-
-    return binarySearchRecoursive(0, values.length - 1);
-
-};
+    return first;
+}
