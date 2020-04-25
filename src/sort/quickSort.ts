@@ -1,9 +1,9 @@
 /**
- * In plage Quick-sort algorithm 
- * @param {T[]} values 
- * @param {(a: T, b: T) => boolean} comparator 
+ * In place Quick-sort algorithm
+ * @param {T[]} values: array to be sorted
+ * @param {(a:T, b:T) => boolean } comparator: function which takes to elements of T and returns true if a < b
  */
-export default function quickSort<T>(values: T[], comparator: (a: T, b: T) => boolean = (a: T, b: T) =>  a < b): void {
+export default function quickSort<T>(values: T[], comparator: (a: T, b: T) => boolean = (a: T, b: T) => a < b) {
 
     const swap = (index1: number, index2: number) => {
         const aux = values[index1];
