@@ -1,4 +1,4 @@
-import {validateBounds, swap} from "./utils";
+import {swap, validateBounds} from "./utils";
 import findIf from "../search/findIf";
 
 /**
@@ -16,7 +16,7 @@ export default function partition<T>(values: T[],
 
     validateBounds(first, last, values.length);
 
-    first = findIf(values, (a: T) => { return !predicate(a) }, first, last);
+    first = findIf(values, (a: T) => !predicate(a), first, last);
 
     if (first == last) {
         return first;
