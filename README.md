@@ -36,6 +36,7 @@
     * Reverse
     * Rotate
     * Partition
+    * Partial Sum
     * Utilities (bound validation, element swapping)
 
 * Mathematical
