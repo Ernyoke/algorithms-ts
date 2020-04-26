@@ -10,7 +10,7 @@ export default function quickSort<T>(values: T[], comparator: (a: T, b: T) => bo
         if (startPosition < endPosition) {
             const pivot = values[startPosition + Math.floor((endPosition - startPosition) / 2)];
             const lowerPartitionPosition = partition(values, (a: T) => comparator(a, pivot), startPosition, endPosition);
-            const upperPartitionPosition = partition(values, (a) => !comparator(pivot, a), lowerPartitionPosition, endPosition);
+            const upperPartitionPosition = partition(values, (a: T) => !comparator(pivot, a), lowerPartitionPosition, endPosition);
             quickSortRecursive(startPosition, lowerPartitionPosition - 1);
             quickSortRecursive(upperPartitionPosition, endPosition);
         }

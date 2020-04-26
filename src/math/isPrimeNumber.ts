@@ -5,8 +5,8 @@ function* range(start = 0, end = 100) {
 }
 
 /**
- * Decide if an integer number is prim (is divisible by 1 and itselft only). 
- * @param {number} number - a numeric integer value 
+ * Decide if an integer number is prim (is divisible by 1 and itself only).
+ * @param {number} number - a numeric integer value
  */
 export default function isPrime(number: number): boolean {
     if (number < 2) {
