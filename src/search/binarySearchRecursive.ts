@@ -6,7 +6,6 @@
  * @param {(a: T, b: T) => boolean} comparator: comparator functions which should compare two elements of type T and
  * should return true if a < b;
  */
-
 export default function binarySearchRecursive<T>(values: T[], elementToFind: T,
                                                  comparator: (a: T, b: T) => boolean = (a: T, b: T) => a < b): number {
 

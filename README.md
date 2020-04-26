@@ -25,14 +25,18 @@
     * Directed Graphs
 
 * Search
-    * Binary Search
+    * Binary Search (recursive and non-recursive)
+    * Find If
 
 * Sort
-    * Quick-sort (recursive and non-recursive)
+    * Quick-sort
+    * Insertion sort
     
 * Arrays:
     * Reverse
     * Rotate
+    * Partition
+    * Utilities (bound validation, element swapping)
 
 * Mathematical
     * Is Power Of 2
@@ -40,7 +44,7 @@
     * Is Number Prime
 
 * Miscellaneous
-    * Is Paranthesis Order Balanced
+    * Is Parenthesis Order Balanced
     * Sort By Binary Ones
 
 
