@@ -23,6 +23,8 @@
             * Prim's
             * Kruskal
     * Directed Graphs
+        * Depth-First Search (DFS)
+        * Breath-First Search (BFS)
 
 * Search
     * Binary Search (recursive and non-recursive)
