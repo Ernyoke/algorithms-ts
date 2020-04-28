@@ -1,7 +1,7 @@
 export default class Heap<T> {
     private _heap: T[] = [];
 
-    constructor(private _comparator = (a: T, b: T) => a < b) {
+    constructor(private _comparator = (a: T, b: T): boolean => a < b) {
     }
 
     push(value: T) {

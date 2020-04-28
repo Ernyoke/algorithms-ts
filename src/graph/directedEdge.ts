@@ -6,8 +6,8 @@ import DirectedNode from "./directedNode";
  * The edge contains an out-node and an in-node. The direction of the edge is from the out-node to the in-node.
  */
 export default class DirectedEdge<T> extends Edge<T, DirectedNode<T>, DirectedEdge<T>> {
-    private _outNode: DirectedNode<T>;
-    private _inNode: DirectedNode<T>;
+    private readonly _outNode: DirectedNode<T>;
+    private readonly _inNode: DirectedNode<T>;
 
     constructor(outNode: DirectedNode<T>, inNode: DirectedNode<T>, weight: number) {
         super(weight);

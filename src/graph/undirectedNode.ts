@@ -2,7 +2,7 @@ import GraphNode from "./graphNode";
 import UndirectedEdge from "./undirectedEdge";
 
 export default class UndirectedNode<T> extends GraphNode<T, UndirectedNode<T>, UndirectedEdge<T>> {
-    private _edges: UndirectedEdge<T>[];
+    private readonly _edges: UndirectedEdge<T>[];
 
     constructor(label: T) {
         super(label);

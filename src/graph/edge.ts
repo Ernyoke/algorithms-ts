@@ -1,7 +1,7 @@
 import GraphNode from "./graphNode";
 
 export default abstract class Edge<T, U extends GraphNode<T, U, V>, V extends Edge<T, U, V>> {
-    constructor(private _weigth: number) {
+    protected constructor(private _weight: number) {
     }
 
     abstract get node1(): U;
@@ -14,7 +14,7 @@ export default abstract class Edge<T, U extends GraphNode<T, U, V>, V extends Ed
 
     abstract otherNode(node: U): U;
 
-    get weigth(): number {
-        return this._weigth;
+    get weight(): number {
+        return this._weight;
     }
 }

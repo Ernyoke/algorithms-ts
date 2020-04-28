@@ -10,7 +10,7 @@ export default abstract class Graph<T, U extends GraphNode<T, U, V>, V extends E
 
     abstract addNode(label: T): U;
 
-    abstract addEdge(label1: T, label2: T, weigth: number): V;
+    abstract addEdge(label1: T, label2: T, weight: number): V;
 
     abstract getNumberOfNodes(): number;
 

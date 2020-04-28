@@ -1,7 +1,7 @@
 import Edge from "./edge";
 
 export default abstract class GraphNode<T, U extends GraphNode<T, U, V>, V extends Edge<T, U, V>> {
-    constructor(private _label: T) {
+    protected constructor(private _label: T) {
     }
 
     get label(): T {

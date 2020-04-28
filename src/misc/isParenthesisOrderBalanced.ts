@@ -1,8 +1,8 @@
 /**
- * Check if the order of paranthesises is balanced.
- * @param {string} str: should contain only paranthesis () characters.
+ * Check if the order of parenthesises is balanced.
+ * @param {string} str: should contain only parenthesis () characters.
  */
-export default function isParanthesisOrderBalanced(str: string): boolean {
+export default function isParenthesisOrderBalanced(str: string): boolean {
     let balanceValue = 0;
     for (let c of str) {
         switch (c) {

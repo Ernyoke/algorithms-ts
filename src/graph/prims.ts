@@ -5,7 +5,7 @@ import Graph from "./graph";
 
 export default function prims<T, U extends GraphNode<T, U, V>, V extends Edge<T, U, V>>(graph: Graph<T, U, V>, startingLabel: T) {
     const firstNode: GraphNode<T, U, V> = graph.node(startingLabel);
-    const queue = new PriorityQueue<V>((edge1: V, edge2: V) => edge1.weigth < edge2.weigth);
+    const queue = new PriorityQueue<V>((edge1: V, edge2: V) => edge1.weight < edge2.weight);
 
     firstNode.edges.forEach((edge) => {
         queue.enqueue(edge);

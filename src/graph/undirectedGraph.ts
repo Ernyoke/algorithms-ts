@@ -40,10 +40,10 @@ export default class UndirectedGraph<T> extends Graph<T, UndirectedNode<T>, Undi
         return node;
     }
 
-    addEdge(label1: T, label2: T, weigth: number): UndirectedEdge<T> {
+    addEdge(label1: T, label2: T, weight: number): UndirectedEdge<T> {
         const node1 = this.addNode(label1);
         const node2 = this.addNode(label2);
-        const edge = new UndirectedEdge<T>(node1, node2, weigth);
+        const edge = new UndirectedEdge<T>(node1, node2, weight);
         this._edges.push(edge);
         node1.addEdge(edge);
         node2.addEdge(edge);

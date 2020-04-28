@@ -40,10 +40,10 @@ export default class DirectedGraph<T> extends Graph<T, DirectedNode<T>, Directed
         return node;
     }
 
-    addEdge(outLabel: T, inLabel: T, weigth: number) {
+    addEdge(outLabel: T, inLabel: T, weight: number) {
         const outNode = this.addNode(outLabel);
         const inNode = this.addNode(inLabel);
-        const edge = new DirectedEdge(outNode, inNode, weigth);
+        const edge = new DirectedEdge(outNode, inNode, weight);
         this._edges.push(edge);
         outNode.addOutEdge(edge);
         inNode.addInEdge(edge);
