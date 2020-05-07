@@ -25,6 +25,9 @@
     * Directed Graphs
         * Depth-First Search (DFS)
         * Breath-First Search (BFS)
+        * Minimum Trees:
+            * Prim's
+            * Kruskal
 
 * Search
     * Binary Search (recursive and non-recursive)

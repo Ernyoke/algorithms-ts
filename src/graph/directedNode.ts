@@ -15,7 +15,7 @@ export default class DirectedNode<T> extends GraphNode<T, DirectedNode<T>, Direc
     }
     
     get inEdges(): DirectedEdge<T>[] {
-        return this._inEdges;
+        return this._inEdges
     }
     
     get outEdges(): DirectedEdge<T>[] {
@@ -32,7 +32,7 @@ export default class DirectedNode<T> extends GraphNode<T, DirectedNode<T>, Direc
     }
     
     /**
-     * In case of directed node for edges we return only those edges wich are pointing to other node (out edges);
+     * In case of directed node for edges we return only those edges which are pointing to other node (out edges);
      */
     get edges(): DirectedEdge<T>[] {
         return this.outEdges;
