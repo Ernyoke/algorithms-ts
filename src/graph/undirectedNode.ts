@@ -20,4 +20,12 @@ export default class UndirectedNode<T> extends GraphNode<T, UndirectedNode<T>, U
     getNeighbours(): UndirectedNode<T>[] {
         return this._edges.map(edge => edge.otherNode(this));
     }
+
+    edgeToNode(node: UndirectedNode<T>): UndirectedEdge<T> {
+        const edge = this._edges.find(edge => edge.otherNode(node));
+        if (!edge) {
+            throw new Error("There is no edge between the nodes!");
+        }
+        return edge;
+    }
 }

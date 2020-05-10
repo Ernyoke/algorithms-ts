@@ -15,4 +15,7 @@ export default abstract class GraphNode<T, U extends GraphNode<T, U, V>, V exten
     }
 
     abstract getNeighbours(): U[];
+
+    abstract edgeToNode(node: U): V;
 }
+

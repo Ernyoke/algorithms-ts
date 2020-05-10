@@ -44,4 +44,12 @@ export default class DirectedNode<T> extends GraphNode<T, DirectedNode<T>, Direc
     getNeighbours(): DirectedNode<T>[] {
         return this._outEdges.map(edge => edge.otherNode(this));
     }
+
+    edgeToNode(node: DirectedNode<T>): DirectedEdge<T> {
+        const edge = this._outEdges.find(edge => edge.otherNode(node));
+        if (!edge) {
+            throw new Error("There is no edge between the nodes!");
+        }
+        return edge;
+    }
 }
