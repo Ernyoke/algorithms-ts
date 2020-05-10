@@ -1,5 +1,8 @@
 import UndirectedGraph from "../../src/graph/undirectedGraph";
 
+/**
+ * Returns an undirected graph used for testing.
+ */
 export default function getUndirectedGraph(): UndirectedGraph<number> {
     /**
      *                 6-----------+---------------+

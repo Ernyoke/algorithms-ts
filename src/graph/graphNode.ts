@@ -16,6 +16,10 @@ export default abstract class GraphNode<T, U extends GraphNode<T, U, V>, V exten
 
     abstract getNeighbours(): U[];
 
+    /**
+     * Should return the edge between this node and the input node
+     * @param {GraphNode<T, U, V>}node - other node
+     */
     abstract edgeToNode(node: U): V;
 }
 

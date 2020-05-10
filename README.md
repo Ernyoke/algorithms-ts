@@ -22,6 +22,9 @@
         * Minimum Trees:
             * Prim's
             * Kruskal
+        * Shortest Path:
+            * Dijkstra's
+        
     * Directed Graphs
         * Depth-First Search (DFS)
         * Breath-First Search (BFS)
