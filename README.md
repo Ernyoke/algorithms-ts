@@ -54,6 +54,7 @@
     
 * Dynamic Programming
     * Fibonacci
+    * Grid Traveler
 
 * Miscellaneous
     * Is Parenthesis Order Balanced
