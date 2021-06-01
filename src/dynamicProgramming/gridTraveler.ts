@@ -4,6 +4,9 @@
  * direction is allowed.
  *
  * In how me ways we can travel an N * M grid?
+ *
+ * @param {number} n - vertical grid size
+ * @param {number} m - horizontal grid size
  */
 export default function gridTraveler(n: number, m: number): number {
 
