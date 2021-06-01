@@ -56,6 +56,7 @@
     * Fibonacci
     * Grid Traveler
     * Can Sum be Constructed?
+    * Can Word be Constructed from Parts?
 
 * Miscellaneous
     * Is Parenthesis Order Balanced
