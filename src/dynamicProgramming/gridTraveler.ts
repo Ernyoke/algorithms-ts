@@ -7,10 +7,10 @@
  */
 export default function gridTraveler(n: number, m: number): number {
 
-    const travelRecursive = (n: number, m: number, memo: any):number => {
+    const travelRecursive = (n: number, m: number, memo: Map<string, number>): number => {
         const key = n + ' ' + m;
-        if (!!memo[key]) {
-            return memo[key];
+        if (memo.has(key)) {
+            return <number>memo.get(key);
         }
 
         if (n == 1 && m == 1) {
@@ -21,9 +21,9 @@ export default function gridTraveler(n: number, m: number): number {
             return 0;
         }
 
-        memo[key] = travelRecursive(n - 1, m, memo) + travelRecursive(n, m - 1, memo);
-        return memo[key];
+        memo.set(key, travelRecursive(n - 1, m, memo) + travelRecursive(n, m - 1, memo));
+        return <number>memo.get(key);
     };
 
-    return travelRecursive(n, m, {});
+    return travelRecursive(n, m, new Map());
 }
