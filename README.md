@@ -58,6 +58,7 @@
     * Can Sum be Constructed?
     * Can Word be Constructed from Parts?
     * Minimize to 1
+    * Climbing Stairs
 
 * Miscellaneous
     * Is Parenthesis Order Balanced
