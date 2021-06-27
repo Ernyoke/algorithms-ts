@@ -45,6 +45,7 @@
     * Rotate
     * Partition
     * Partial Sum
+    * Find number of smaller elements to the right
     * Utilities (bound validation, element swapping)
 
 * Mathematical
